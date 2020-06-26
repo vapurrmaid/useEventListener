@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react",
+    "module": "CommonJS",
+    "outDir": "dist",
+    "rootDir": "src",
+    "strict": true,
+    "target": "ES2015"
+  },
+  "exclude": ["test"]
+}
