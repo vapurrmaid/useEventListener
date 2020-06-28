@@ -1,8 +1,19 @@
 import { useEffect } from "react";
 
-export function useWindowEventListener<T extends keyof WindowEventHandlersEventMap>(
+export function useDocumentEventListener<T extends keyof DocumentEventMap>(
   type: T,
-  listener: (ev: WindowEventHandlersEventMap[T]) => void,
+  listener: (ev: DocumentEventMap[T]) => void,
+  dependencies: React.DependencyList = []
+): void {
+  useEffect(() => {
+    document.addEventListener(type, listener);
+    return () => document.removeEventListener(type, listener);
+  }, [type, listener, ...dependencies]);
+}
+
+export function useWindowEventListener<T extends keyof WindowEventMap>(
+  type: T,
+  listener: (ev: WindowEventMap[T]) => void,
   dependencies: React.DependencyList = []
 ): void {
   useEffect(() => {
