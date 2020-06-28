@@ -20,6 +20,7 @@
   "files": [
     "dist"
   ],
+  "main": "dist/use-event-listener.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/vapurrmaud/useEventListener"
