@@ -1,7 +1,7 @@
 {
   "name": "@vapurrmaid/use-event-listener",
   "version": "0.0.0",
-  "description": "A react hook for adding and disposing of a window event listener",
+  "description": "React hooks for adding and disposing basic event listeners",
   "keywords": [
     "event-listener",
     "react-hooks",
@@ -25,7 +25,8 @@
     "url": "https://github.com/vapurrmaud/useEventListener"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "prettier --check src && eslint --color --ext=ts src && tsc",
+    "clean": "rimraf dist",
     "format": "prettier --write src",
     "lint": "eslint --color --ext=ts src",
     "test": "jest"
@@ -54,6 +55,7 @@
     "prettier-plugin-organize-imports": "^1.1.0",
     "react-dom": "^16.13.1",
     "release-it": "^13.6.3",
+    "rimraf": "^3.0.2",
     "ts-jest": "^26.1.1",
     "typescript": "^3.9.5"
   },
