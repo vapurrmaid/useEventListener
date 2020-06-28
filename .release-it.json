@@ -1,0 +1,13 @@
+{
+  "git": {
+    "commitArgs": "--gpg-sign",
+    "commitMessage": ":rocket: v${version}",
+    "tagAnnotation": "v${version}",
+    "tagArgs": "--sign"
+  },
+  "github": {
+    "release": true,
+    "releaseName": "Release ${version}",
+    "tokenRef": "RELEASE_IT_GITHUB_TOKEN"
+  }
+}
